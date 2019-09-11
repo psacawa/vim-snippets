@@ -265,7 +265,7 @@ endglobal
 # Class & Special Method Name Snippets #
 ########################################
 
-snippet class "class with docstrings" b
+snippet classdoc "class with docstrings" b
 class ${1:MyClass}(${2:object}):
 
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
@@ -498,7 +498,7 @@ def __coerce__(self, other):
 endsnippet
 
 snippet deff
-def ${1:fname}(`!p snip.rv = vim.eval('indent(".") ? "self" : ""')`$2):
+def ${1:fname}($2):
 	$0
 endsnippet
 
