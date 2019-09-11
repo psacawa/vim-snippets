@@ -27,7 +27,7 @@ endsnippet
 
 snippet block "" bi
 {% block $1 %}
-	$2
+	${2:${VISUAL:block content}}
 {% endblock $1 %}
 endsnippet
 
@@ -147,8 +147,12 @@ snippet trans "" bi
 endsnippet
 
 snippet url "" bi
-{% url $1 as $2 %}
+{% url $1 %}
 endsnippet
+
+# snippet url "" bi
+# {% url $1 as $2 %}
+# endsnippet
 
 snippet widthratio "" bi
 {% widthratio ${1:this_value} ${2:max_value} ${3:100} %}

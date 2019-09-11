@@ -16,10 +16,10 @@ snippet autoescape
 	{% autoescape ${1:off} %}
 		${0}
 	{% endautoescape %}
-snippet block
-	{% block ${1} %}
-		${0}
-	{% endblock %}
+# snippet block
+#   {% block ${1} %}
+#     ${0}
+#   {% endblock %}
 snippet #
 	{# ${0:comment} #}
 snippet comment
@@ -79,8 +79,8 @@ snippet ssi
 	{% ssi ${0} %}
 snippet trans
 	{% trans "${0:string}" %}
-snippet url
-	{% url ${1} as ${0} %}
+# snippet url
+#   {% url ${1} as ${0} %}
 snippet widthratio
 	{% widthratio ${1:this_value} ${2:max_value} ${0:100} %}
 snippet with
