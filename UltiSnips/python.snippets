@@ -6,7 +6,7 @@ priority -50
 
 #! header
 snippet #! "#!/usr/bin/env python" b
-#!/usr/bin/env python
+#!/usr/bin/env python3
 $0
 endsnippet
 
@@ -497,22 +497,28 @@ def __coerce__(self, other):
 	${25:pass}
 endsnippet
 
-snippet deff
+snippet def
 def ${1:fname}($2):
-	$0
+	${0:${VISUAL:pass}}
 endsnippet
 
-snippet def "function with docstrings" b
+# snippet def "function with docstrings" b
+# def ${1:function}(`!p
+# if snip.indent:
+#   snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
+#   `!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
+# write_function_docstring(t, snip) `
+#   ${5:${VISUAL:pass}}
+# endsnippet
+
+snippet defc "function with docstrings" b
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-	`!p snip.rv = triple_quotes(snip)`${4:TODO: Docstring for $1.}`!p
-write_function_docstring(t, snip) `
 	${5:${VISUAL:pass}}
 endsnippet
 
-
-snippet defc "class method with docstrings" b
+snippet defcm "class method with docstrings" b
 @classmethod
 def ${1:function}(`!p
 if snip.indent:
