@@ -265,11 +265,9 @@ endglobal
 # Class & Special Method Name Snippets #
 ########################################
 
-snippet classdoc "class with docstrings" b
+snippet class "class with docstrings" b
 class ${1:MyClass}(${2:object}):
-
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
-
 	def __init__(self$4):
 		`!p snip.rv = triple_quotes(snip)`${5:TODO: to be defined.}`!p
 snip.rv = ""
@@ -499,6 +497,7 @@ endsnippet
 
 snippet def
 def ${1:fname}($2):
+	"""${3:docstring for $1}"""
 	${0:${VISUAL:pass}}
 endsnippet
 
