@@ -20,7 +20,7 @@ if __name__ == `!p snip.rv = get_quoting_style(snip)`__main__`!p snip.rv = get_q
 	${1:${VISUAL:main()}}
 endsnippet
 
-snippet with "with" b
+snippet with "with" 
 with ${1:expr}`!p snip.rv = " as " if t[2] else ""`${2:var}:
 	${3:${VISUAL:pass}}
 $0
@@ -29,6 +29,11 @@ endsnippet
 snippet for "for loop" b
 for ${1:item} in ${2:iterable}:
 	${3:${VISUAL:pass}}
+endsnippet
+
+snippet wh "while loop" b 
+while ${1:condition}:
+	${0:${VISUAL}pass}
 endsnippet
 
 ##########
@@ -401,9 +406,6 @@ def __repr__(self):
 
 def __str__(self):
 	${2:pass}
-
-def __unicode__(self):
-	${3:pass}
 endsnippet
 
 
@@ -495,10 +497,23 @@ def __coerce__(self, other):
 	${25:pass}
 endsnippet
 
-snippet def
+snippet def "generic func" b
 def ${1:fname}($2):
 	"""${3:docstring for $1}"""
 	${0:${VISUAL:pass}}
+endsnippet
+
+snippet adef "asynchronous func" b
+async def ${1:fname}($2):
+	"""${3:docstring for $1}"""
+	${0:${VISUAL:pass}}
+endsnippet
+
+snippet cdef "function with docstrings" b
+def ${1:function}(`!p
+if snip.indent:
+	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
+	${5:${VISUAL:pass}}
 endsnippet
 
 # snippet def "function with docstrings" b
@@ -509,13 +524,6 @@ endsnippet
 # write_function_docstring(t, snip) `
 #   ${5:${VISUAL:pass}}
 # endsnippet
-
-snippet defc "function with docstrings" b
-def ${1:function}(`!p
-if snip.indent:
-	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-	${5:${VISUAL:pass}}
-endsnippet
 
 snippet defcm "class method with docstrings" b
 @classmethod
