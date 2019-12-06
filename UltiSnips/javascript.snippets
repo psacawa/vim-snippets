@@ -35,11 +35,17 @@ endglobal
 # }${10:,}
 # endsnippet
 
-snippet :f "Object Method"
-${1:method_name}: function`!p snip.rv = space_before_function_paren(snip)`(${3:attribute}) {
-	${VISUAL}$0
-}${10:,}
+snippet cfun "Arrow Class Method" b
+${1:method_name} `!p snip.rv = space_before_function_paren(snip)`(${2:args}) {
+	${3:${VISUAL:body}}$0
+}
 endsnippet
+
+# snippet :f "Object Method"
+# ${1:method_name}: function`!p snip.rv = space_before_function_paren(snip)`(${3:attribute}) {
+#   ${VISUAL}$0
+# }${10:,}
+# endsnippet
 
 # snippet :, "Object Value JS"
 # ${1:value_name}: ${0:value},
@@ -77,7 +83,7 @@ function`!p snip.rv = space_before_function_paren(snip)`($1) {
 endsnippet
 priority -50
 
-snippet anf "function (anonymous)" i
+snippet afun "function (anonymous)" i
 function`!p snip.rv = space_before_function_paren(snip)`($1) {
 	${VISUAL}$0
 }
@@ -101,13 +107,13 @@ endsnippet
 # }${2:.bind(${3:this})}, ${1:10})`!p snip.rv = semi(snip)`
 # endsnippet
 
-snippet fi "for prop in obj using hasOwnProperty" b
-for`!p snip.rv = keyword_spacing(snip)`(${1:prop} in ${2:obj}){
-	if`!p snip.rv = keyword_spacing(snip)`($2.hasOwnProperty($1)) {
-		${VISUAL}$0
-	}
-}
-endsnippet
+# snippet fi "for prop in obj using hasOwnProperty" b
+# for`!p snip.rv = keyword_spacing(snip)`(${1:prop} in ${2:obj}){
+#   if`!p snip.rv = keyword_spacing(snip)`($2.hasOwnProperty($1)) {
+#     ${VISUAL}$0
+#   }
+# }
+# endsnippet
 
 snippet if "if (condition) { ... }"
 if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {

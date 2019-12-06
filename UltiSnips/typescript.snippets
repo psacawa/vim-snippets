@@ -1,3 +1,29 @@
 priority -50
-
 extends javascript
+
+global !p
+from javascript_snippets import (
+	semi, space_before_function_paren, keyword_spacing
+)
+endglobal
+
+snippet from "importfrom module" b
+import ${1:object} from '${2:module}';
+endsnippet
+
+snippet nfrom "importfrom module" b
+import { ${1:object} } from '${2:module}';
+endsnippet
+
+snippet forin "for prop in obj" b
+for`!p snip.rv = keyword_spacing(snip)`(${1:prop} in ${2:obj}){
+	${3:${VISUAL:content}}$0
+}
+endsnippet
+
+snippet forof "for prop of obj" b
+for`!p snip.rv = keyword_spacing(snip)`(${1:prop} of ${2:obj}){
+	${3:${VISUAL:content}}$0
+}
+endsnippet
+
