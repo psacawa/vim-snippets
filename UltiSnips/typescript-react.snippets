@@ -1,19 +1,16 @@
 extends html
 extends react-bootstrap
 
-# Import only React
-snippet ri1
+snippet ri1 "Import only React" b
 import React from 'react'
 endsnippet
 
-# Import both React and Component
-snippet ri2
+snippet ri2 "Import both React and Component" b
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 endsnippet
 
-# React class
-snippet rcla
+snippet rcla "React class" b
 class ${1:MyComponent} extends Component {
 	render() {
 		return (
@@ -23,8 +20,7 @@ class ${1:MyComponent} extends Component {
 }
 endsnippet
 
-# React constructor
-snippet rcon
+snippet rcon "React constructor" b
 constructor(props) {
   super(props)
   this.state = {
@@ -33,22 +29,19 @@ constructor(props) {
 }
 endsnippet
 
-# Proptypes for React Class
-snippet rcpt
+snippet rcpt "Proptypes for React Class" b
 static propTypes = {
   ${1}: PropTypes.${0},
 }
 endsnippet
 
-# Default props for React Class
-snippet rcdp
+snippet rcdp "Default props for React Class" b
 static defaultProps = {
   ${1}: ${0},
 }
 endsnippet
 
-# Presentational component
-snippet rcom
+snippet rcom "Presentational component" b
 props => {
   return (
     ${0:<div></div>}
@@ -56,43 +49,38 @@ props => {
 }
 endsnippet
 
-# Proptypes for Presentational component
-snippet rpt
+snippet rpt "Proptypes for Presentational component" b
 ${1}.propTypes = {
   ${2}: PropTypes.${0},
 }
 endsnippet
 
-# Default props for Presentational component
-snippet rdp
+snippet rdp "Default props for Presentational component" b
 ${1}.defaultProps = {
   ${2}: ${0},
 }
 endsnippet
 
-# Lifecycle Methods
-snippet rcdm
+snippet rcdm "Lifecycle Methods" b
 componentDidMount() {
   ${0:${VISUAL}}
 }
 endsnippet
 
-# State
-snippet rsst
+snippet rsst "State" b
 this.setState({
   ${1}: ${0},
 })
 endsnippet
 
-snippet rtst
+snippet rtst 
 this.state.${0}
 endsnippet
 
-# Props
-snippet rp
+snippet rp "Props"
 props.${0}
 endsnippet
 
-snippet rtp
+snippet rtp 
 this.props.${0}
 endsnippet
