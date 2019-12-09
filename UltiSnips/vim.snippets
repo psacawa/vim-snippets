@@ -16,9 +16,38 @@ endif
 let $1 = 1$3
 endsnippet
 
-snippet f "function" b
-fun ${1:function_name}($2)
+snippet fun "function" b
+function! ${1:function_name}($2)
 	${3:" code}
 endf
 endsnippet
+
+snippet if "if statement" b
+if ${1:condition}
+	${2:${VISUAL:body}}$0
+endif
+endsnippet
+
+snippet ife "if/else block" b
+if ${1:condition}
+	${2:${VISUAL:if body}}
+else
+	${3:else body}$0
+endif
+endsnippet
+
+snippet ifee "if/elsif/else block" b
+if ${1:condition}
+	${2:${VISUAL:if body}}
+elseif
+	${2:else body}$0
+endif
+endsnippet
+
+snippet while "while loop" b
+while ${1:condition}
+	${2:${VISUAL:body}}$0
+endwhile
+endsnippet
+
 # vim:ft=snippets:
