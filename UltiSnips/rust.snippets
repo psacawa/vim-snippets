@@ -16,16 +16,16 @@ pub fn ${1:function_name}($2)${3/..*/ -> /}$3 {
 }
 endsnippet
 
-snippet p "print!(..)" b
-print!("$1"${2/..*/, /}$2);
+snippet p "print!(..)" w
+print!("$1"${2/.+/, /}$2);
 endsnippet
 
-snippet pln "println!(..)" b
-println!("$1"${2/..*/, /}$2);
+snippet pln "println!(..)" w
+println!("$1"${2/.+/, /}$2);
 endsnippet
 
 snippet fmt "format!(..)"
-format!("$1"${2/..*/, /}$2);
+format!("$1"${2/.+/, /}$2);
 endsnippet
 
 snippet .it ".iter()" i
@@ -33,23 +33,39 @@ snippet .it ".iter()" i
 endsnippet
 
 snippet for "pętla for" b
-for ${1:iten} in ${2:collection} {
+for ${1:item} in ${2:collection} {
 	${3:${VISUAL:body}}$0
 }
 endsnippet
 
-snippet if "wyrażenie if" b
+
+snippet wh "pętla while" b
+while ${1:condition} {
+	${2:${VISUAL:body}}$0
+}
+endsnippet
+
+
+snippet if "wyrażenie if" w
 if ${1:condition} { 
 	${2:${VISUAL:body}}$0
 }
 endsnippet
 
-snippet ife "wyrażenie if/else" b
+snippet ife "wyrażenie if/else" w
 if ${1:condition} { 
 	${2:${VISUAL:if_block}}
 } else {
 	${3:else_block}$0
 }
+endsnippet
+
+snippet derive "makro proceduralny derive" b
+#[derive(${1:Trait})]
+endsnippet
+
+snippet allow "makro proceduralny allow" b
+#[allow(${1:dead_code})]
 endsnippet
 
 
