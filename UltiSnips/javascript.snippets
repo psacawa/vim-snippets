@@ -89,12 +89,6 @@ snippet iife "Immediately-Invoked Function Expression (iife)"
 }(${2:$1}))`!p snip.rv = semi(snip)`
 endsnippet
 
-# snippet ;fe "Minify safe iife"
-# ;(function`!p snip.rv = space_before_function_paren(snip)`(${1}) {
-#   ${VISUAL:body}$0
-# }(${2}))
-# endsnippet
-
 # snippet timeout "setTimeout function"
 # setTimeout(function`!p snip.rv = space_before_function_paren(snip)`() {
 #   ${VISUAL:body}$0
@@ -124,13 +118,13 @@ if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
 endsnippet
 
 snippet switch
-switch`!p snip.rv = keyword_spacing(snip)`(${VISUAL:body}${1:expression}) {
-	case '${VISUAL:body}${3:case}':
-		${4}
-		break`!p snip.rv = semi(snip)`
-	${0}
+switch (${1:condition}) {
+	case ${2:value};
+		${3:${VISUAL:body}}
+		break;
 	default:
-		${2}
+		${2:default_body}
+		break;
 }
 endsnippet
 
@@ -146,12 +140,8 @@ do`!p snip.rv = keyword_spacing(snip)`{
 }`!p snip.rv = keyword_spacing(snip)`while`!p snip.rv = keyword_spacing(snip)`(${1:/* condition */})`!p snip.rv = semi(snip)`
 endsnippet
 
-# snippet ret "Return statement"
-# return ${VISUAL:body}$0`!p snip.rv = semi(snip)`
-# endsnippet
-
-# snippet us
-# 'use strict'`!p snip.rv = semi(snip)`
-# endsnippet
+snippet cl "console.log(...)" b
+console.log ${1:"hello world"}
+endsnippet
 
 # vim:ft=snippets:
