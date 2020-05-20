@@ -62,7 +62,7 @@ ${1:class_name}.prototype.${2:method_name} = function`!p snip.rv = space_before_
 
 endsnippet
 
-snippet fun "function (named)" b
+snippet fun "function (named)" 
 function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:argument}) {
 	${3:${VISUAL:body}}$0
 }
@@ -119,7 +119,7 @@ endsnippet
 
 snippet switch
 switch (${1:condition}) {
-	case ${2:value};
+	case ${2:value}:
 		${3:${VISUAL:body}}
 		break;
 	default:
