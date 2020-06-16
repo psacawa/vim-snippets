@@ -74,6 +74,10 @@ endsnippet
 # vim`!v ':set '. (&expandtab ? printf('et sw=%i ts=%i', &sw, &ts) : printf('noet sts=%i sw=%i ts=%i', &sts, &sw, &ts)) . (&tw ? ' tw='. &tw : '') . ':'`
 # endsnippet
 
+snippet vimft "Vim filetype modeline" b
+vim: set ft=${0:filetype}:
+endsnippet
+
 #########
 # DATES #
 #########
