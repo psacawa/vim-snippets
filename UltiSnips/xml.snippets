@@ -4,20 +4,3 @@ snippet xml "XML declaration" b
 <?xml version="1.0"?>
 
 endsnippet
-
-snippet t "Simple tag" 
-<${1:tag}>
-	${2:${VISUAL:content}}
-</${1/([\w:._-]+).*/$1/}>
-endsnippet
-
-snippet ti "Inline tag" b
-<${1:tag}>${2:${VISUAL:content}}</${1/([\w:._-]+).*/$1/}>
-endsnippet
-
-
-snippet ts "self-closing tag" 
-<${1:tag}$0 />
-endsnippet
-
-
