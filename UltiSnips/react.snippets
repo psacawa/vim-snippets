@@ -1,5 +1,4 @@
 extends html
-extends react-bootstrap
 
 snippet ri "Import only React" b
 import React, { Component } from 'react'
@@ -55,19 +54,3 @@ endsnippet
 snippet rtp "propts" w
 this.props.${2}
 endsnippet
-
-##### TESTOWANIE
-
-snippet describe "jest describe block" b
-describe ("${1:block description}", () => {
-	${0:${VISUAL:block body}}
-})
-endsnippet
-
-snippet it "jest test block" b
-it ("${1:test description}", () => {
-	${0:${VISUAL:test body}}
-})
-endsnippet
-
-

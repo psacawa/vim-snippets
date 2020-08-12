@@ -199,4 +199,23 @@ snippet ce "console.error(...)"
 console.error (${1:"hello world"})
 endsnippet
 
+##### TESTOWANIE
+
+snippet describe "jest describe block" b
+describe ("${1:block description}", () => {
+	${0:${VISUAL:block body}}
+})
+endsnippet
+
+snippet it "jest test block" b
+it ("${1:test description}", () => {
+	${0:${VISUAL:test body}}
+})
+endsnippet
+
+snippet ait "jest async test block" b
+it ("${1:test description}", async () => {
+	${0:${VISUAL:test body}}
+})
+endsnippet
 # vim:ft=snippets:
