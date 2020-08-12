@@ -98,11 +98,24 @@ function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:
 }
 endsnippet
 
+snippet afun "async function"
+async function ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:argument}) {
+	${3:${VISUAL:body}}$0
+}
+endsnippet
+
 snippet gen "generator (named)" 
 function* ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2:argument}) {
 	${3:${VISUAL:body}}$0
 }
 endsnippet
+
+snippet arfun "arrow function"
+const ${1:function_name} = (${2:argument}) {
+	${3:${VISUAL:body}}$0
+}
+endsnippet
+
 
 # snippet vf "function (assigned to var)"
 # ${1:var }${2:function_name} = function $2`!p snip.rv = space_before_function_paren(snip)`($3) {
@@ -113,11 +126,6 @@ endsnippet
 # Drop priority so this only triggers when not beginning of line.
 
 priority -51
-snippet afun "function (anonymous)" i
-function`!p snip.rv = space_before_function_paren(snip)`($1) {
-	${2:${VISUAL:body}}$0
-}
-endsnippet
 
 snippet iife "Immediately-Invoked Function Expression (iife)"
 (function`!p snip.rv = space_before_function_paren(snip)`(${1:window}) {
@@ -157,6 +165,16 @@ if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
 	${2:${VISUAL:if_body}}
 }`!p snip.rv = keyword_spacing(snip)`else`!p snip.rv = keyword_spacing(snip)`{
 	${3:else_body}$0
+}
+endsnippet
+
+snippet ifee "if (condition) { ... } else { ... }"
+if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
+	${2:${VISUAL:if_body}}
+else if`!p snip.rv = keyword_spacing(snip)`(${3:true}) {
+	${4:${elseif_body}}
+} else {
+	${5:else_body}$0
 }
 endsnippet
 
