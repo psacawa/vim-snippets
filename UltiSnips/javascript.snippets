@@ -23,11 +23,11 @@ from javascript_snippets import (
 )
 endglobal
 
-snippet from "import from module" b
+snippet fromd "import from module" b
 import ${1:object} from '${2:module}';
 endsnippet
 
-snippet fromn "import from module" b
+snippet from "import from module" b
 import { ${1:object} } from '${2:module}';
 endsnippet
 
@@ -40,6 +40,14 @@ endsnippet
 snippet forof "for prop of obj" b
 for`!p snip.rv = keyword_spacing(snip)`(${1:prop} of ${2:obj}){
 	${3:${VISUAL:content}}$0
+}
+endsnippet
+
+snippet cla "class with constructor" b
+class ${1:Class} {
+	constructor (${2:args}) {
+		${3:${VISUAL:contructor body}}$0
+	}
 }
 endsnippet
 

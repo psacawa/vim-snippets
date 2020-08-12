@@ -1,14 +1,9 @@
 extends html
 extends react-bootstrap
 
-snippet ri1 "Import only React" b
+snippet ri "Import only React" b
 import React, { Component } from 'react'
 endsnippet
-
-# snippet ri2 "Import both React and Component" b
-# import React, { Component } from 'react'
-# import PropTypes from 'prop-types'
-# endsnippet
 
 snippet rcla "React class" b
 class ${1:MyComponent} extends Component<${2:Props}, ${3:State}> {
@@ -29,35 +24,11 @@ constructor(props) {
 }
 endsnippet
 
-snippet rcpt "Proptypes for React Class" b
-static propTypes = {
-  ${1}: PropTypes.${2},
-}
-endsnippet
-
-snippet rcdp "Default props for React Class" b
-static defaultProps = {
-  ${1}: ${2},
-}
-endsnippet
-
 snippet rcom "Presentational component" b
 props => {
   return (
     ${2:<div></div>}
   )
-}
-endsnippet
-
-snippet rpt "Proptypes for Presentational component" b
-${1}.propTypes = {
-  ${2}: PropTypes.${3},
-}
-endsnippet
-
-snippet rdp "Default props for Presentational component" b
-${1}.defaultProps = {
-  ${2}: ${3},
 }
 endsnippet
 
@@ -81,6 +52,22 @@ snippet rp "Props"
 props.${2}
 endsnippet
 
-snippet rtp 
+snippet rtp "propts" w
 this.props.${2}
 endsnippet
+
+##### TESTOWANIE
+
+snippet describe "jest describe block" b
+describe ("${1:block description}", () => {
+	${0:${VISUAL:block body}}
+})
+endsnippet
+
+snippet it "jest test block" b
+it ("${1:test description}", () => {
+	${0:${VISUAL:test body}}
+})
+endsnippet
+
+
