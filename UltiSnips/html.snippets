@@ -109,7 +109,7 @@ snippet br "<br>" w
 <br/>$1
 endsnippet
 
-snippet button "<button>"
+snippet button "<button>" w
 <button>$1</button>
 endsnippet
 
@@ -283,10 +283,6 @@ snippet htmll "HTML basic structure with the lang attribute" b
 		${0:body}
 	</body>
 </html>
-endsnippet
-
-snippet i "<i>" w
-<i>$1</i>
 endsnippet
 
 snippet id "id global attribute"
@@ -534,18 +530,18 @@ snippet wbr "<wbr>" w
 <wbr>$1</wbr>
 endsnippet
 
-snippet t "Simple tag" 
+snippet t "Simple tag" w
 <${1:tag}>
 	${2:${VISUAL:content}}
 </${1/([\w:._-]+).*/$1/}>
 endsnippet
 
-snippet ti "Inline tag" 
+snippet ti "Inline tag" w
 <${1:tag}>${2:${VISUAL:content}}</${1/([\w:._-]+).*/$1/}>
 endsnippet
 
 
-snippet ts "self-closing tag" 
+snippet ts "self-closing tag" w
 <${1:tag}$0 />
 endsnippet
 
