@@ -7,6 +7,13 @@ interface ${1:Interface} {
 }
 endsnippet
 
+snippet module "declare module"
+declare module "${1:module}" {
+	${2:${VISUAL:body}}$0
+}
+endsnippet
+
+
 snippet /// "dyrektywa potrójnego ukośnika" b
 /// <reference ${1:file}="${2:ts_require}"/>
 endsnippet
