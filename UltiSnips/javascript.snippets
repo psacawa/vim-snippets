@@ -172,7 +172,7 @@ snippet ifee "if (condition) { ... } else { ... }"
 if`!p snip.rv = keyword_spacing(snip)`(${1:true}) {
 	${2:${VISUAL:if_body}}
 else if`!p snip.rv = keyword_spacing(snip)`(${3:true}) {
-	${4:${elseif_body}}
+	${4:elseif_body}
 } else {
 	${5:else_body}$0
 }
