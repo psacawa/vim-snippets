@@ -110,15 +110,27 @@ function* ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2
 }
 endsnippet
 
+snippet ar "arrow function" w
+(${1:argument}) => {
+	${2:${VISUAL:body}}$0
+}
+endsnippet
+
 snippet ard "arrow function"
 const ${1:function_name} = (${2:argument}) => {
 	${3:${VISUAL:body}}$0
 }
 endsnippet
 
-snippet ar "arrow function"
+snippet aar "async arrow function" w
 (${1:argument}) => {
 	${2:${VISUAL:body}}$0
+}
+endsnippet
+
+snippet aard "async arrow function"
+const ${1:function_name} = (${2:argument}) => {
+	${3:${VISUAL:body}}$0
 }
 endsnippet
 
