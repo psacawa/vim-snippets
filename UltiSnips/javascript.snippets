@@ -110,12 +110,17 @@ function* ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2
 }
 endsnippet
 
-snippet arfun "arrow function"
-const ${1:function_name} = (${2:argument}) {
+snippet ard "arrow function"
+const ${1:function_name} = (${2:argument}) => {
 	${3:${VISUAL:body}}$0
 }
 endsnippet
 
+snippet ar "arrow function"
+(${1:argument}) => {
+	${2:${VISUAL:body}}$0
+}
+endsnippet
 
 # snippet vf "function (assigned to var)"
 # ${1:var }${2:function_name} = function $2`!p snip.rv = space_before_function_paren(snip)`($3) {
