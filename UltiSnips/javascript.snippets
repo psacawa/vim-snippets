@@ -242,6 +242,18 @@ describe ("${1:block description}", () => {
 })
 endsnippet
 
+snippet bE "jest beforeEach block" b
+beforeEach (() => {
+	${0:${VISUAL:block body}}
+})
+endsnippet
+
+snippet aE "jest afterEach block" b
+afterEach (() => {
+	${0:${VISUAL:block body}}
+})
+endsnippet
+
 snippet it "jest test block" b
 it ("${1:test description}", () => {
 	${0:${VISUAL:test body}}
