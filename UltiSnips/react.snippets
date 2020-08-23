@@ -54,3 +54,9 @@ endsnippet
 snippet rtp "propts" w
 this.props.${2}
 endsnippet
+
+snippet childcom "inlined functional child component" w
+\{(\{${1:destructured props}\}) => (
+	${2:${VISUAL:component body}}$0
+)\}
+endsnippet
