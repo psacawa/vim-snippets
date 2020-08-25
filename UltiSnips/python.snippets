@@ -42,6 +42,10 @@ while ${1:condition}:
 	${0:${VISUAL}pass}
 endsnippet
 
+snippet p "print statement" b
+print(${1:${VISUAL:"hello world"}})
+endsnippet
+
 ##########
 # COMMON #
 ##########
@@ -515,11 +519,26 @@ async def ${1:fname}($2):
 	${0:${VISUAL:pass}}
 endsnippet
 
+snippet ddef "decorate func" b
+@${1:decorator}
+def ${2:fname}($3):
+	"""${4:docstring for $2}"""
+	${0:${VISUAL:pass}}
+endsnippet
+
 snippet cdef "function with docstrings" b
 def ${1:function}(`!p
 if snip.indent:
 	snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
-	${5:${VISUAL:pass}}
+	${0:${VISUAL:pass}}
+endsnippet
+
+snippet cddef "class func w/ decorator " b
+@${1:decorator}
+def ${2:function}(`!p
+if snip.indent:
+	snip.rv = 'self' + (", " if len(t[3]) else "")`${3:arg1}):
+	${0:${VISUAL:pass}}
 endsnippet
 
 # snippet def "function with docstrings" b
