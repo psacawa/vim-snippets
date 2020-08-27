@@ -150,11 +150,11 @@ snippet iife "Immediately-Invoked Function Expression (iife)"
 }(${2:$1}))`!p snip.rv = semi(snip)`
 endsnippet
 
-# snippet timeout "setTimeout function"
-# setTimeout(function`!p snip.rv = space_before_function_paren(snip)`() {
-#   ${VISUAL:body}$0
-# }${2:.bind(${3:this})}, ${1:10})`!p snip.rv = semi(snip)`
-# endsnippet
+snippet sT "setTimeout function"
+setTimeout(() => {
+	${0:${VISUAL:body}}
+}, ${1:1000})
+endsnippet
 
 # snippet fi "for prop in obj using hasOwnProperty" b
 # for`!p snip.rv = keyword_spacing(snip)`(${1:prop} in ${2:obj}){

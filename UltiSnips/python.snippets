@@ -280,7 +280,7 @@ endglobal
 # Class & Special Method Name Snippets #
 ########################################
 
-snippet class "class with docstrings" b
+snippet classinit "class with docstrings" b
 class ${1:MyClass}(${2:object}):
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 	def __init__(self$4):
@@ -300,6 +300,10 @@ write_init_body(args, t[2], snip)
 		$0
 endsnippet
 
+snippet class "minimal class with inheritance" b
+class ${1:MyClass}${2/^\w+$/(/}${2:object}${2/^\w+$/)/}: 
+	${0:${VISUAL:pass}}
+endsnippet
 
 snippet slotclass "class with slots and docstrings" b
 class ${1:MyClass}(${2:object}):
