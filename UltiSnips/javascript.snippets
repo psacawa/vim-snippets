@@ -23,12 +23,17 @@ from javascript_snippets import (
 )
 endglobal
 
-snippet fromd "import from module" b
+snippet imp "import from module" b
+import { ${1:object} } from '${2:module}';
+endsnippet
+
+snippet impd "import default from module" b
 import ${1:object} from '${2:module}';
 endsnippet
 
-snippet from "import from module" b
-import { ${1:object} } from '${2:module}';
+# wyraz. reg. obcina przedrostki: ../ ./ \w+/ oraz przyrostek \.\w+
+snippet imps "import * from module" b
+import * as ${1/^(?:(?:\.\.|\.|\w+)\/)*(?P<base>\w+)(?:\.\w+)?$/$1/} from '${1:module}';
 endsnippet
 
 snippet forin "for prop in obj" b
@@ -111,6 +116,12 @@ function* ${1:function_name}`!p snip.rv = space_before_function_paren(snip)`(${2
 endsnippet
 
 snippet ar "arrow function" w
+(${1:argument}) => (
+	${2:${VISUAL:body}}$0
+)
+endsnippet
+
+snippet arb "arrow function" w
 (${1:argument}) => {
 	${2:${VISUAL:body}}$0
 }
