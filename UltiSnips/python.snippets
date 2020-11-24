@@ -42,7 +42,7 @@ while ${1:condition}:
 	${0:${VISUAL}pass}
 endsnippet
 
-snippet p "print statement" b
+snippet "p(r)?" "print statement" br
 print(${1:${VISUAL:"hello world"}})
 endsnippet
 
@@ -300,7 +300,7 @@ write_init_body(args, t[2], snip)
 		$0
 endsnippet
 
-snippet class "minimal class with inheritance" b
+snippet "cl(ass)?" "minimal class with inheritance" br
 class ${1:MyClass}${2/^\w+$/(/}${2:object}${2/^\w+$/)/}: 
 	${0:${VISUAL:pass}}
 endsnippet

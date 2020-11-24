@@ -50,7 +50,7 @@ for`!p snip.rv = keyword_spacing(snip)`(${1:prop} of ${2:obj}){
 }
 endsnippet
 
-snippet class "class with constructor" b
+snippet "cl(ass)?" "class with constructor" br
 class ${1:Class}${2/^\w+$/ extends /}${2:Base} {
 	constructor (${3:args}) {
 		${4:${VISUAL:super()}}$0
@@ -177,7 +177,7 @@ endsnippet
 # }
 # endsnippet
 
-snippet while "while loop" b
+snippet "wh(ile)?" "while loop" br
 while (${1:condition}) {
 	${2:${VISUAL:body}}
 }
