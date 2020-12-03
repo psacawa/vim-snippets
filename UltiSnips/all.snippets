@@ -102,15 +102,15 @@ snippet datetime "YYYY-MM-DD hh:mm" w
 endsnippet
 
 snippet todo "TODO comment" bw
-<TODO `date +"%d/%m/%C"`: ${1:finish this}>
+TODO `date +"%d/%m/%C"` `whoami`: ${1:finish this}
 endsnippet
 
 snippet fixme "FIXME comment" bw
-<TODO `date +"%d/%m/%C"`: ${1:this is currently broken}>
+TODO `date +"%d/%m/%C"` `whoami`: ${1:this is currently broken}
 endsnippet
 
 snippet note "NOTE comment" bw
-<TODO `date +"%d/%m/%C"`: ${1:caution}>
+TODO `date +"%d/%m/%C"` `whoami`: ${1:caution}
 endsnippet
 
 ##########
