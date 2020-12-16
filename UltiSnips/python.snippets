@@ -301,7 +301,7 @@ write_init_body(args, t[2], snip)
 endsnippet
 
 snippet "cl(ass)?" "minimal class with inheritance" br
-class ${1:MyClass}${2/^\w+$/(/}${2:object}${2/^\w+$/)/}: 
+class ${1:MyClass}${2/^[.\w]+$/(/}${2:object}${2/^[.\w]+$/)/}: 
 	${0:${VISUAL:pass}}
 endsnippet
 
