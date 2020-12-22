@@ -23,6 +23,14 @@ from javascript_snippets import (
 )
 endglobal
 
+snippet from "import from module" b
+import { ${2:object} } from '${1:module}';
+endsnippet
+
+snippet fromd "import default from module" b
+import ${2:object} from '${1:module}';
+endsnippet
+
 snippet imp "import from module" b
 import { ${1:object} } from '${2:module}';
 endsnippet
@@ -50,7 +58,7 @@ for`!p snip.rv = keyword_spacing(snip)`(${1:prop} of ${2:obj}){
 }
 endsnippet
 
-snippet "cl(ass)?" "class with constructor" br
+snippet "class" "class with constructor" br
 class ${1:Class}${2/^\w+$/ extends /}${2:Base} {
 	constructor (${3:args}) {
 		${4:${VISUAL:super()}}$0
