@@ -125,7 +125,7 @@ def get_popular_code_type():
 	try:
 		popular_type = Counter(types).most_common()[0][0]
 	except IndexError:
-		popular_type = "lua" # Don't break default
+		popular_type = "python" # Don't break default
 	return popular_type
 endglobal
 
