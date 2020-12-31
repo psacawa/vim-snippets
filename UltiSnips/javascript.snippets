@@ -264,3 +264,27 @@ endsnippet
 snippet reqn "require node module" 
 const ${1:module} = require('$1')
 endsnippet
+
+snippet it "jest it block" 
+it(${1:"description"}, () => {
+	${VISUAL:content}$0
+});
+endsnippet
+
+snippet ait "jest async it block" 
+it(${1:"description"}, async () => {
+	${VISUAL:content}$0
+});
+endsnippet
+
+snippet desc "jest describe block" 
+describe(${1:"description"}, () => {
+	${VISUAL:content}$0
+});
+endsnippet
+
+snippet bE "jest beforeEach block" 
+beforeEach(() => {
+	${VISUAL:content}$0
+});
+endsnippet
