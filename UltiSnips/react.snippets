@@ -60,3 +60,16 @@ snippet childcom "inlined functional child component" w
 	${2:${VISUAL:component body}}$0
 )\}
 endsnippet
+
+
+snippet ?: "react ternary rendering" 
+\{${1:condition} ? (
+	${2:${VISUAL:<>
+		true block
+	<\/>}}
+) : (
+	${3:<>
+		false block
+	</>}$0
+)}
+endsnippet
