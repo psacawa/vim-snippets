@@ -4,26 +4,10 @@ snippet s "String" b
 "${1:key}": "${0:value}",
 endsnippet
 
-snippet n "Number" b
-"${1:key}": ${0:value},
-endsnippet
-
-snippet a "Array" b
-[
-	${VISUAL}$0
-],
-endsnippet
-
 snippet na "Named array" b
 "${1:key}": [
 	${VISUAL}$0
 ],
-endsnippet
-
-snippet o "Object" b
-{
-	${VISUAL}$0
-},
 endsnippet
 
 snippet no "Named object" b
@@ -31,11 +15,6 @@ snippet no "Named object" b
 	${VISUAL}$0
 },
 endsnippet
-
-snippet null "Null" b
-"${0:key}": null,
-endsnippet
-
 
 global !p
 def compB(t, opts):
@@ -48,4 +27,40 @@ endglobal
 
 snippet b "Bool" b
 "${1:key}": $2`!p snip.rv=compB(t[2], ['true', 'false'])`,
+endsnippet
+
+snippet policy "Generic AWS IAM identity-based policy" b
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"${1:ec2:StartInstances}",
+			],
+			"Resource": "${2:arn:aws:ec2:*:*:instance/*}"
+		}
+	]
+}
+endsnippet
+
+
+snippet bucket-policy "Generic AWS IAM bucket policy" b
+{
+	"Version":"2012-10-17",
+	"Statement":[
+		{
+			"Effect":"Allow",
+			"Principal": {
+				"AWS": [
+					"arn:aws:iam::886185890074:${1:role/myrole}",
+				]
+			},
+			"Action": [
+				"${2:s3:PutObject}",
+			],
+			"Resource":"arn:aws:s3:::${3:mybucket}/*"
+		}
+	]
+}
 endsnippet
