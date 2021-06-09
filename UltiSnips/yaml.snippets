@@ -1,2 +1,10 @@
 priority -50
 extends ansible
+
+snippet "ks(chema)?" "yaml-language-server schema" br
+# yaml-language-server: \$schema=file://home/psacawa/.schema/kube/${1:pod}.json
+endsnippet
+
+snippet "sc(hema)?" "yaml-language-server schema" br
+# yaml-language-server: \$schema=${1:file://home/psacawa/.schema/}$0
+endsnippet
